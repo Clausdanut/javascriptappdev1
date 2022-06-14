@@ -1,0 +1,26 @@
+<h1>{{tittle}}</h1>
+<p>This is Claudiu</p>
+<ul>
+    <li>{{user.id}}</li>
+    <li>{{user.nume}}</li>
+    <li>{{user.prenume}}</li>
+</ul>
+{{image}}
+
+<img [src]="image" [alt]="user.nume">
+<img *ngIf = 'showImage' src='{{image}}' alt="{{user.nume}}">
+
+
+<button (click) = 'afiseazaImagine()' > Afiseaza/Ascune imaginea</button>
+
+<h2>    Transfer informatii bidirectional</h2>
+<input type="text" [(ngModel)]="nume ">
+{{nume}}
+
+<ul>
+    <li *ngFor ="let erou of eroi">
+ <p><span *ngIf="erou.id<=3">{{erou.id}} -{{erou.name}}</span></p>
+</li>
+   
+
+</ul>
